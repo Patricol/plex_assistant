@@ -82,9 +82,9 @@ async def async_setup(hass, config):
     try:
         from homeassistant.components.zeroconf import async_get_instance
         zc = await async_get_instance(hass)
-    except:
-        from zeroconf import Zeroconf
-        zc = Zeroconf()
+    #except:
+    #    from zeroconf import Zeroconf
+    #    zc = Zeroconf()
 
     directory = hass.config.path() + "/www/plex_assist_tts/"
     if tts_error and not os.path.exists(directory):
